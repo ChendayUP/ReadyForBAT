@@ -7,18 +7,20 @@
 //
 
 #import "ViewController.h"
+#import <objc/runtime.h>
 
 @interface ViewController ()
 
 @end
 
+static NSString* key = @"newKey";
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    objc_setAssociatedObject(self, &key, @"hello", OBJC_ASSOCIATION_COPY);
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

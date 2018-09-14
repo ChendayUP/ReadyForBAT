@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -104,6 +104,17 @@
                                     <action selector="asyncGlobalPerform:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CbT-Z2-QSm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJu-jb-Dq0">
+                                <rect key="frame" x="34" y="523" width="71" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="J9m-jc-9LT"/>
+                                </constraints>
+                                <state key="normal" title="group队列"/>
+                                <connections>
+                                    <action selector="asyncGlobalPerform:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jb1-2n-Gsi"/>
+                                    <action selector="groupAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TeX-Ay-dBT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -118,6 +129,8 @@
                             <constraint firstItem="HEb-bT-Iwz" firstAttribute="top" secondItem="bxC-kC-7zz" secondAttribute="bottom" constant="58" id="DkL-Lq-fEu"/>
                             <constraint firstItem="bxC-kC-7zz" firstAttribute="top" secondItem="ZwI-rK-8RZ" secondAttribute="bottom" constant="103" id="GrP-zY-3HX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qQd-pd-va8" secondAttribute="trailing" constant="90" id="N5x-G0-3W9"/>
+                            <constraint firstItem="xJu-jb-Dq0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="NKi-9D-O51"/>
+                            <constraint firstItem="xJu-jb-Dq0" firstAttribute="top" secondItem="YaC-Vd-99b" secondAttribute="bottom" constant="8" id="Wxp-kM-tig"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c4i-li-dJ2" secondAttribute="trailing" constant="90" id="ZnB-in-atL"/>
                             <constraint firstItem="ZwI-rK-8RZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="at4-7y-Rr9"/>
                             <constraint firstItem="qQd-pd-va8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="106" id="byd-GJ-WtB"/>

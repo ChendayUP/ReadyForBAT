@@ -262,5 +262,25 @@
 - (void)printLog{
     NSLog(@"2---%@",[NSThread currentThread]);      // 打印当前线程
 }
+- (IBAction)groupAction:(id)sender {
+    NSLog(@"currentThread---%@",[NSThread currentThread]);  // 打印当前线程
+    NSLog(@"asyncConcurrent---begin");
+    
+    dispatch_queue_t queue = dispatch_queue_create("net.bujige.testQueue", DISPATCH_QUEUE_CONCURRENT);
+    
+    dispatch_group_t group = dispatch_group_create();
+    
+    NSArray *array = @[@"sss", @"sdfsdfsdfs"];
+    
+    for (NSString *url in array) {
+        dispatch_group_async(group, queue, ^{
+            NSLog(@"url is %@", url);
+        });
+    }
+    
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        NSLog(@"done");
+    });
+}
 
 @end
